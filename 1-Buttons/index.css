@@ -1,3 +1,12 @@
+body {
+  margin-top: 100px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+/* ---------------Btn1---------------------- */
 .Btn1 {
   display: flex;
   align-items: center;
@@ -63,4 +72,54 @@
 /* button click effect*/
 .Btn1:active {
   transform: translate(2px, 2px);
+}
+/* ---------------Btn2---------------------- */
+.btn2 {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(155, 0, 0);
+  transition: 0.5s ease;
+}
+
+.btn2:hover {
+  color: #ffffff;
+  transition-delay: 0.5s;
+}
+
+.btn2:hover::before {
+  width: 100%;
+}
+
+.btn2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: rgb(155, 0, 0);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn2:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
 }
